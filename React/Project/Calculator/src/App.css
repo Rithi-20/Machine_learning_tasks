@@ -1,0 +1,174 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.app {
+    width: 90%;
+    max-width: 750px;
+    margin: 50px auto;
+ 
+}
+
+.app-title {
+    text-align: center;
+    color: #2563eb;
+    font-size: 32px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 11px 18px;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.navbar button {
+    background: #cbd5e1;
+    color: #1e293b;
+}
+
+.navbar button.active {
+    background: #2563eb;
+    color: white;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    background: #eff6ff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input button {
+    height: 43px;
+    /* To display words in single line */
+    white-space: nowrap;  
+}
+
+.task-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #eff6ff;
+    padding: 18px;
+    border-radius: 8px;
+    margin: 15px 0 25px;
+}
+
+.task-stats h3 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+.task-stats p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap between each flex */
+    gap: 10px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.task-completed {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.task-actions button {
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.empty-message {
+    text-align: center;
+    color: #64748b;
+    padding: 20px;
+}
+
+/* It apply different css styles based on screen size */
+/* This style will be applied when the screen size is 500px or less */
+@media (max-width: 500px) {
+    .task-item {
+        /* It will start the flex from beginning */
+        align-items: flex-start;
+        /* It will align the flex vertically instaed of hoizontally */
+        flex-direction: column;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-stats {
+        gap: 10px;
+    }
+}
